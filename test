@@ -1,0 +1,16 @@
+Testcase Desc	File Type	Test Data Combination	CARD_SCHEME	Expected Results
+Import a TC57 Visa transaction with sale, refund and CA for VISA Specific Transaction Detail	TC57	"RECORD:BATCH_HEADER
+RECORD:BATCH_HEADER_TCR1
+FIELD:MERCH_NBR=100000000200
+RECORD:COMMON_TCR0
+FIELD:CARD_TYPE=V
+FIELD:TXN_TYPE=5,7,6
+FIELD:ACCOUNT_RANGE= GEN_PAN (bin.card_scheme=04,bin.region=1,bin.regulated_ind=Y,bin.cntry_code_alpha2=US,bin.acct_fund_src=C,bin.product_id=A,bin.acct_lvl_part_ind=N)
+FIELD:PURCHASE_DATE =GEN_DATE(1)
+FIELD:TXN_AMOUNT=2000
+FIELD:MCC=0742
+RECORD:TC57_D_COMM
+FIELD:FREQUENCYOFINSTALLMENTS=B,M,W
+FIELD:PLANOWNER=00,01,02,03
+RECORD:BATCH_TRAILER
+RECORD:BATCH_TRAILER91"	04	Same as Input Data
